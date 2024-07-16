@@ -1,0 +1,46 @@
+<% layout("layout/boilerplate.ejs") %>
+
+    <body>
+
+        <form method="post" action="/booking">
+            <div class="row mt-5">
+              <h3 style="color: lightblue;">Booking details :</h3>
+              <div class="col-md-6 mb-3">
+                <label for="formGroupExampleInput" class="form-label">Name</label>
+                <input type="text" name="booking[name]" class="form-control" id="formGroupExampleInput" placeholder="name" required>
+                <div class="invalid-feedback">Shoud be Title</div>
+              </div>
+
+
+                <div class="col-md-6 mb-3">
+                    <label for="formGroupExampleInput" class="form-label">City</label>
+                    <input type="text" name="booking[cityName]" class="form-control" id="formGroupExampleInput" placeholder="city" required>
+                    <div class="invalid-feedback">Shoud be Title</div>
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Number of Person</label>
+                    <input type="text" name="booking[person]" class="form-control" id="formGroupExampleInput" placeholder="person" required>
+                    <div class="invalid-feedback">Shoud be Title</div>
+                  </div>
+
+                  <!-- <div class="col-md-6 mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Traveling Date</label>
+                    <input type="date" name="booking[date]" class="form-control" id="formGroupExampleInput" required>
+                    <div class="invalid-feedback">Shoud be Title</div>
+                  </div> -->
+
+                  <div class="col-md-6 mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Payment Mode</label>
+                    <input type="text" name="booking[mode]" class="form-control" id="formGroupExampleInput" placeholder="Cash" required>
+                    <div class="invalid-feedback">Shoud be Title</div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Children</label>
+                    <input type="text" name="booking[children]" class="form-control" id="formGroupExampleInput" placeholder="Children" required>
+                    <div class="invalid-feedback">Shoud be Title</div>
+                  </div>
+              </div>
+              <button type="submit" class="btn btn-primary"><b>Submit</b></button>
+        </form>
+    </body>

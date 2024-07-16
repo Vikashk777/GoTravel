@@ -1,0 +1,86 @@
+<% layout("/layout/boilerplate.ejs") %>
+
+    <body>
+
+        <section class="section-1">
+
+            <main>
+                <div class="main-container">
+                    <h1 style="font-size: 33px;">Explore the world with a smile</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sequi est quaerat magni nostrum
+                        aperiam
+                        quam alias? Optio repudiandae qui possimus velit? Alias enim nemo molestias in inventore maiores
+                        provident.</p>
+
+                    <!-- <form action="/">
+                        <div class="homePage">
+                            <span style="color: gray; margin-right: 5px;"><i
+                                    class="fa-solid fa-location-dot"></i></span>
+                            <input type="text" placeholder="City or Destination" style="width: 25%;">
+                            <input type="text" placeholder="Date of stay" style="width: 20%;">
+                            <input type="number" placeholder="Person" maxlength="3" style="width: 15%;">
+                            <button>Find Trip Now <span><i class="fa-solid fa-magnifying-glass"></i></span></button>
+                        </div>
+                    </form> -->
+
+                </div>
+            </main>
+
+        </section>
+
+        <!-- Section 2 -->
+
+        <section class="section-2">
+
+            <h3>Best Offer Places</h3>
+
+            <div id="bestOffer">
+                <% for(let travel of allTravels) { %>
+                    <% if(travel.price <=150) {%>
+                        <a style="text-decoration: none;" href="/show/<%= travel._id %>">
+                            <div class="offerCards">
+                                <img src="<%= travel.imageUrl %>" alt="image">
+                                <h4>
+                                    <%= travel.city %>
+                                </h4>
+
+                                <h6 style="width: 100%;"><b style="color: red;">Price : </b>
+                                    <%= travel.price %>
+                                </h6>
+                            </div>
+                        </a>
+                        <% } %>
+                            <% } %>
+            </div>
+
+        </section>
+
+        <section class="section-3">
+            <form action="/home" method="post" class="mt-3 mb-5">
+                <div class="row col-8 offset-2 ">
+                    <h3>Contact Us</h3>
+                    <div>
+                        <label for="formGroupExampleInput" class="form-label">Full Name :</label>
+                        <input type="text" name="fullName" class="form-control" id="formGroupExampleInput"
+                            placeholder="name" required>
+                    </div>
+                    <div>
+                        <label for="formGroupExampleInput" class="form-label">Email : </label>
+                        <input type="email" name="email" class="form-control" id="formGroupExampleInput"
+                            placeholder="email" required>
+                    </div>
+                    <div>
+                        <label for="formGroupExampleInput" class="form-label">Message :</label>
+                        <textarea rows="5" type="text" name="message" class="form-control" id="formGroupExampleInput"
+                            placeholder="message" required> </textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                </div>
+            </form>
+        </section>
+
+
+    </body>
+
+
+    </html>

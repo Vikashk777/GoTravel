@@ -1,0 +1,18 @@
+<% layout("layout/boilerplate") %>
+
+<div class="row bg-color">
+    <div class="col-6 offset-3 mt-2">
+        <h3>Log In GoTravel</h3>
+        <form action="/login" method="POST" class="needs-validation">
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" name="username" placeholder="enter username" id="usename" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" placeholder="enter password" id="password" required>
+        </div>
+        <button class="btn btn-success">LogIn</button>
+    </form>
+    </div>
+</div>

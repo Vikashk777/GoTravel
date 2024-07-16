@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-md border-bottom sticky-top" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <h3>&lt;Go<span class="logo-span">Travel</span>/&gt;</h3>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+            <li class="nav-item">
+              <a class="nav-link" style="font-weight: 700;" aria-current="page" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="font-weight: 700;" href="/place">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="font-weight: 700;" href="/booking">Booking</a>
+            </li>
+            <li class="nav-item">
+              <% if(currUser) {%>
+              <a class="nav-link" style="font-weight: 700;" href="/tickets">Tickets</a>
+              <% } %>
+            </li>
+          </ul>
+          
+          
+              <div class="navbar-nav ms-auto">
+                <% if(!currUser) { %>
+                <a class="nav-link" href="/signup">Sign Up</a>
+                <a class="nav-link" href="/login">Log In</a>
+                <% } %>
+                
+                <% if(currUser) { %>
+                <a class="nav-link" href="/logout">Log Out</a>
+                <% } %>
+              </div>
+            </i>
+
+
+
+        </div>
+      </div>
+  </nav>

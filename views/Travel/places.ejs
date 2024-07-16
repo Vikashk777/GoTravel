@@ -1,0 +1,22 @@
+<% layout("layout/boilerplate.ejs") %>
+
+<body>
+    <div class="container">
+
+    <div class="cards">
+
+        <% for (let travel of allTravels){ %>
+        <div class="card" style="width: 19rem ;">
+            <img src="<%= travel.imageUrl %>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><%= travel.city %></h5>
+              <p class="card-text"><%= travel.description %></p>
+              <a href="/show/<%= travel._id %>" class="btn btn-primary">Details</a>
+            </div>
+          </div>
+          <% } %>
+    </div>
+
+  </div>
+
+</body>

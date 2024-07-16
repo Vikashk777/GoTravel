@@ -1,0 +1,32 @@
+<% layout("layout/boilerplate") %>
+
+    <body>
+        <div class="show">
+            <div class="card">
+                <img class="card-img-top" src="<%= findPlace.imageUrl %>" alt="placeImg">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        <%= findPlace.city %>
+                    </h5>
+
+                    <p class="card-text">
+                        <%= findPlace.description %>
+                    </p>
+
+                    <p class="card-text">
+                        <b>
+                            &#8377;
+                            <%= findPlace.price.toLocaleString("en-IN") %>
+
+                        </b>
+                    </p>
+
+                </div>
+
+                <a href="/booking"><button class="btn btn-primary" style="padding: 4px; margin: 5px 10px;">Book trip</button></a>
+
+            </div>
+        </div>
+    </body>
